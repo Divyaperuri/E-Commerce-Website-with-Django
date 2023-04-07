@@ -1,0 +1,276 @@
+{% load static %}
+<!DocType Html>
+<html>
+    <link>
+        <title> Mobile Page </title>
+          <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+          <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js">
+          </script>
+          <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+          <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+
+  <nav class="navbar navbar-inverse" style="background-color:#9ddae2">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <a class="navbar-brand" style="font-weight: 900; font-size: xx-large; color:#801060;font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">ANDROID MOBILE STORE</a>
+      </div>
+      <ul class="navbar-nav-ml-auto" style="text-align: left;">
+        <li class="nav-item active">
+          {% if user.is_authenticated %}
+          <a class="nav-link" href="#">Home
+      </a>
+      </li>
+        <li class="nav-item">
+        <a class="nav-link" href="{% url logout %}">
+        Logout
+        <a></li>
+        {% endif %}
+    </ul>
+    </div>
+  </nav>
+</head>
+
+{% block content %}
+<body style="background-color: rgb(17, 53, 104);">
+    <div class="blogcontainer">
+        <h2 style="color:azure; text-align: left;"><b>Treat yourself to a new Mobile Phone</b></h2>
+    </div>
+    <div class="blogcontainer">
+    <div class="blogwriteUp">
+        <p style="color:azure; text-align: left">
+            Experience the world at your fingertips! Work, socialise, book a ride,<br>
+            play games, listen to music, watch your favourite shows, take a photo, <br>
+            or simply make a call! Buy a Mobile Phone from Croma that does it all and then some.
+        </p>
+    </div>
+</div>
+<div>
+    <h4 style="color:azure; text-align: left; font-style: italic; font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">Latest Mobiles for You</h4>
+</div>
+<div>
+  <div class="card-group">
+    <div class="card">
+      <img class="card-img-top" src="https://i0.wp.com/newgadgetsindia.com/wp-content/uploads/2023/03/Xiaomi-13-Pro-5G-jpg.webp?fit=800%2C800&ssl=1" alt="xiaomi">
+      <div class="card-body">
+        <h5 class="card-title">
+          <a href="{% url 'xiaomi' %}">Xiaomi</a></h5>
+        <p class="card-text">Xiaomi has been at the forefront of smartphone innovation for the past couple of years. From ultra-fast charging to waterfall displays, and display-equipped camera bumps, Xiaomi has it all.</p>
+        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+      </div>
+    </div>
+    <div class="card">
+      <img class="card-img-top" src="https://cdn.shopify.com/s/files/1/2951/3150/products/iphone-14-pro-purple.jpg?v=1665582030&width=900" alt="IPhone">
+      <div class="card-body">
+        <h5 class="card-title">
+          <a href="{% url 'apple' %}">Apple IPhone</a></h5>
+        <p class="card-text">Apple Iphone 14Pro 128Gb ,6.1 inch (15.54 cm) Super Retina XDR 2556 x 1179 display * 48MP Main + 12MP Ultra Wide + 12MP 2x Telephoto Rear Camera * 12MP camera Selfie Camera.</p>
+        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img class="card-img-top" src="https://m.media-amazon.com/images/W/IMAGERENDERING_521856-T1/images/I/91W42b8YW+L._SL1500_.jpg" alt="samsung">
+      <div class="card-body">
+        <h5 class="card-title">
+          <a href="{% url 'samsung'  %}">Samsung</a></h5>
+        <p class="card-text">Galaxy S21 series is 5G ready. Compatibility dependent upon 5G network availability in India..</p>
+        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+      </div>
+    </div>
+    <div class="card">
+      <img class="card-img-top" src="https://d2d22nphq0yz8t.cloudfront.net/88e6cc4b-eaa1-4053-af65-563d88ba8b26/https://media.croma.com/image/upload/v1662419965/Croma%20Assets/Communication/Mobiles/Images/233751_jimdw7.png/mxw_640,f_auto" alt="oneplus">
+      <div class="card-body">
+        <h5 class="card-title">
+          <a href="{% url 'oneplus'  %}">OnePlus</a></h5>
+        <p class="card-text">OnePlus Mobile Phones Price List in India · OnePlus Nord CE 3 5G · OnePlus Nord CE 3 Lite 5G .</p>
+        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+      </div>
+    </div>
+      <div class="card-group">
+        <div class="card">
+          <img class="card-img-top" src="https://www.gizmochina.com/wp-content/uploads/2022/06/Xiaomi-Poco-F4-500x500.jpg" alt="pocco">
+          <div class="card-body">
+            <h5 class="card-title">
+              <a href="{% url 'poco'  %}">Poco</a></h5>
+            <p class="card-text">POCO Pro 5G The secret to win Snapdragon® 778G processor 120Hz FHD+ AMOLED DotDisplay 108MP pro-grade main camera 67W turbo charging.</p>
+            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+          </div>
+        </div>
+        <div class="card">
+          <img class="card-img-top" src="https://opsg-img-cdn-gl.heytapimg.com/epb/202302/15/SrtL7TwcCqYXBAln.png" alt="oppo">
+          <div class="card-body">
+            <h5 class="card-title">
+              <a href="{% url 'oppo'  %}">Oppo</a></h5>
+            <p class="card-text">Oppo Reno Pro 5G It has a 6.5-inch full-HD+ AMOLED bright display panel. The phone is also decked with a 64MP + 8MP + 2MP + 2MP rear camera and a 32MP front camera. .</p>
+            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+          </div>
+        </div>
+        <div class="card">
+          <img class="card-img-top" src="https://cdn.shopaccino.com/fastemicom/products/realme-gt-2-pro-paper-white-8gb-ram-128gb-storage-709429_s.jpg" alt="realme">
+          <div class="card-body">
+            <h5 class="card-title">
+              <a href="{% url 'realme'  %}">Realme</a></h5>
+            <p class="card-text">Realme 9i 5G smartphone, which has a plethora of innovative capabilities. You can enjoy quick 5G speeds and outstanding performance.</p>
+            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+          </div>
+        </div>
+        <div class="card">
+          <img class="card-img-top" src="data:image/jpeg;base64,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" alt="iqoo">
+          <div class="card-body">
+            <h5 class="card-title">
+              <a href="{% url 'iqoo'  %}">IQOO</a></h5>
+            <p class="card-text">iQOO Mobile Phones Price List in India ; iQOO Z7 5G. ₹18,999 · Dimensity 920, Octa Core, 2.5 GHz Processor.</p>
+            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+          </div>
+        </div>
+        
+    </div>
+  </div>
+</div>
+
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+    .fa {
+      padding: 20px;
+      font-size: 30px;
+      width: 50px;
+      text-align: center;
+      text-decoration: none;
+      margin: 5px 2px;
+    }
+    
+    .fa:hover {
+        opacity: 0.7;
+    }
+    
+    .fa-facebook {
+      background: #3B5998;
+      color: white;
+    }
+    
+    .fa-twitter {
+      background: #55ACEE;
+      color: white;
+    }
+    
+    .fa-google {
+      background: #dd4b39;
+      color: white;
+    }
+    
+    .fa-linkedin {
+      background: #007bb5;
+      color: white;
+    }
+    
+    .fa-youtube {
+      background: #bb0000;
+      color: white;
+    }
+    
+    .fa-instagram {
+      background: #125688;
+      color: white;
+    }
+    
+    .fa-pinterest {
+      background: #cb2027;
+      color: white;
+    }
+    
+    .fa-snapchat-ghost {
+      background: #fffc00;
+      color: white;
+      text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+    }
+    
+    .fa-skype {
+      background: #00aff0;
+      color: white;
+    }
+    
+    .fa-android {
+      background: #a4c639;
+      color: white;
+    }
+    
+    .fa-dribbble {
+      background: #ea4c89;
+      color: white;
+    }
+    
+    .fa-vimeo {
+      background: #45bbff;
+      color: white;
+    }
+    
+    .fa-tumblr {
+      background: #2c4762;
+      color: white;
+    }
+    
+    .fa-vine {
+      background: #00b489;
+      color: white;
+    }
+    
+    .fa-foursquare {
+      background: #45bbff;
+      color: white;
+    }
+    
+    .fa-stumbleupon {
+      background: #eb4924;
+      color: white;
+    }
+    
+    .fa-flickr {
+      background: #f40083;
+      color: white;
+    }
+    
+    .fa-yahoo {
+      background: #430297;
+      color: white;
+    }
+    
+    .fa-soundcloud {
+      background: #ff5500;
+      color: white;
+    }
+    
+    .fa-reddit {
+      background: #ff5700;
+      color: white;
+    }
+    
+    .fa-rss {
+      background: #ff6600;
+      color: white;
+    }
+    </style>
+   
+   <div class="container" align="center">
+    
+     <!-- Add font awesome icons --> -->
+     <a href="#" class="fa fa-facebook"></a>
+    <a href="#" class="fa fa-twitter"></a>
+    <a href="#" class="fa fa-google"></a>
+    <a href="#" class="fa fa-linkedin"></a>
+    <a href="#" class="fa fa-youtube"></a>
+    <a href="#" class="fa fa-instagram"></a>
+    <footer class="page-footer font-small blue">
+
+      <!-- Copyright --> -->
+      <div class="footer-copyright text-center py-3" style="color:white">© 2020 Copyright:
+        <a href="#" style="color:#b5bf2d"> Mobile Store</a>
+      </div>      
+   
+    </footer>
+  </div>
+</body>
+{% endblock content %}
+</html> 
+ 
